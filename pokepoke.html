@@ -1,0 +1,298 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122b54"><meta name="app-version" content="20261114.1"><title>ポケポケ コレクションチェッカー</title><style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:#17263c;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(120deg,#122b54,#23569a);color:#fff;padding:23px 16px}h1{font-size:22px;margin:0 0 5px}.sub{font-size:12px;opacity:.88}.wrap{max-width:980px;margin:auto}main{padding:15px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:18px}.stat{background:#ffffff1c;border:1px solid #ffffff24;border-radius:12px;padding:10px;text-align:center}.stat strong{display:block;font-size:22px}.stat span{font-size:11px}.sectiontitle{font-size:12px;color:#566c86;margin:16px 0 8px;font-weight:700}.buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:4px 0 17px}.buttons button{border:1px solid #c6d5e9;border-radius:10px;background:#fff;min-height:41px;padding:9px 6px;font-size:12px;font-weight:650;cursor:pointer}.buttons #refresh{grid-column:1/-1;background:#e7f0ff;color:#204b89;border-color:#b9d0f2}.update-notice{margin:-5px 0 14px;padding:12px;border:1px solid #b8d3f5;border-radius:11px;background:#edf5ff;font-size:13px;line-height:1.6;color:#244670}.update-notice[hidden]{display:none}.update-notice button{background:#1f4d91;color:#fff;border:none;border-radius:9px;padding:9px 14px;font-weight:700;margin-top:7px;cursor:pointer}.tabs{display:flex;gap:7px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:thin}.tabs button{flex:none;border:1px solid #c7d5e8;padding:11px 14px;border-radius:12px;background:white;font-size:13px;font-weight:750;white-space:nowrap;cursor:pointer}.tabs button.active{background:#1f4d91;border-color:#1f4d91;color:white}.star2-sub{margin:0 0 12px;padding:11px 12px;background:#e9f1ff;border:1px solid #c7d9f4;border-radius:12px}.star2-sub[hidden]{display:none}.star2-label{display:block;color:#385e94;font-size:12px;font-weight:750;margin-bottom:8px}.star2-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.star2-options button{border:1px solid #b7cbe7;border-radius:10px;background:white;min-height:40px;padding:8px 4px;color:#24436e;font-size:12px;font-weight:750;cursor:pointer}.star2-options button.active{background:#1f4d91;border-color:#1f4d91;color:white}.category-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}.category-tabs button{border:1px solid #c7d5e8;background:white;border-radius:11px;min-height:43px;padding:10px 6px;font-size:12px;font-weight:700;cursor:pointer;overflow-wrap:anywhere}.category-tabs button:first-child{grid-column:1/-1;min-height:46px;font-size:14px;background:#eaf2ff;border-color:#8aaddf}.category-tabs button.active,.category-tabs button:first-child.active{background:#1f4d91;color:white;border-color:#1f4d91}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.controls input,.controls select{width:100%;min-width:0;padding:11px;border:1px solid #c9d6e8;border-radius:10px;background:white;font-size:14px;color:#17263c}.controls #search{grid-column:1/-1}.filters{display:flex;gap:8px;margin:10px 0}.filters button{flex:1;background:#fff;border:1px solid #c8d4e6;padding:11px 5px;border-radius:9px;font-weight:700;cursor:pointer}.filters button.active{background:#23579c;color:#fff;border-color:#23579c}.pack{margin:15px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px #10274009}.packhead{background:#e6eefb;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px;font-weight:750}.packhead small{font-weight:500;color:#5c708c}.bar{height:5px;background:#d9e1ee}.bar i{display:block;height:100%;background:#258659}.item{display:flex;gap:10px;align-items:center;padding:12px;border-top:1px solid #eef1f6}.item.owned{background:#f0faf4}.info{flex:1;min-width:0}.info strong{display:block;font-size:14px;line-height:1.4}.info small{display:block;color:#64778f;margin-top:5px;font-size:11px}.tag{display:inline-block;background:#eaf0fb;color:#31568a;font-size:10px;border-radius:7px;padding:3px 6px;margin-left:5px}.searchlink{font-size:11px;white-space:nowrap;color:#2157a0;text-decoration:none;background:#f6f9ff;border:1px solid #c8d9f4;border-radius:8px;padding:8px}.check{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer}.check input{width:22px;height:22px;accent-color:#168350}.note,.progress{font-size:12px;color:#65778c;line-height:1.7}.progress{margin:8px 0}.empty{background:#fff;border-radius:12px;padding:25px;text-align:center;color:#63758d}.loader{font-size:12px;color:#244670;background:#eaf2ff;padding:11px;border-radius:9px}.subtle-section{margin:18px 0}.setrow{padding:9px 0;border-bottom:1px solid #eef0f4}.rowmeta{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px}.setrow .bar{border-radius:8px;overflow:hidden}.setrow .bar>div{height:100%;background:#258659}.btn-more{display:block;margin:12px auto;border:1px solid #c7d5e8;border-radius:10px;background:#fff;padding:12px 20px;font-weight:700}details summary{color:#294b7d;font-weight:700;cursor:pointer;margin:12px 0}#goTop{position:fixed;right:18px;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:100;background:#1f4d91;color:white;border:1px solid #fff6;border-radius:999px;min-width:54px;height:54px;padding:0 15px;box-shadow:0 4px 16px #142f5d66;font-size:13px;font-weight:750;cursor:pointer;display:none}#goTop.show{display:block}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #88baff;outline-offset:2px}@media(max-width:500px){.category-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.item{flex-wrap:wrap}.info{flex-basis:100%}.searchlink{flex:1;text-align:center}.check{flex:1;justify-content:flex-end}.tabs button{padding:10px 12px}}
+
+.quick-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 15px}.quick-nav button{min-height:44px;background:#e7f0ff;border:1px solid #b9d0f2;border-radius:11px;color:#204b89;font-size:13px;font-weight:750;cursor:pointer}.reset-row{display:flex;justify-content:flex-end;margin:8px 0 4px}.reset-row button{border:1px solid #b9cbe5;border-radius:10px;background:#f0f5ff;color:#1d4b84;font-size:13px;font-weight:750;padding:10px 13px;cursor:pointer}.setrow{width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid #eef0f4;cursor:pointer}.setrow:hover,.setrow:focus-visible{background:#edf5ff}.setrow .rowmeta{align-items:center}.jump-hint{font-size:11px;color:#526e98;margin:5px 0 11px}html{scroll-behavior:smooth}#packProgress,#cards{scroll-margin-top:14px}
+
+/* 所持記録の初期化はページ最下部の折りたたみ内に配置 */
+.danger-settings{margin:26px 0 8px;border-top:1px solid #e4e9f0;padding-top:12px;color:#7a8595;font-size:11px}
+.danger-settings summary{font-size:11px;color:#77879a;font-weight:500;margin:3px 0 9px}
+.danger-settings p{margin:5px 0 10px;line-height:1.65}
+.danger-settings button{background:transparent;border:1px solid #d8c4c4;color:#986666;border-radius:8px;padding:8px 11px;font-size:11px;cursor:pointer}
+.danger-settings button:focus-visible{outline:3px solid #88baff;outline-offset:2px}
+</style></head><body>
+<header><div class="wrap"><h1>✦ ポケポケ コレクションチェッカー</h1><div class="sub">⭐2・⭐3・クラウン・色違い⭐1・色違い⭐2 ／ プロモ対象外</div><div class="stats"><div class="stat"><strong id="ownedN">—</strong><span>所持</span></div><div class="stat"><strong id="totalN">—</strong><span>全種類</span></div><div class="stat"><strong id="rateN">—</strong><span>達成率</span></div></div></div></header>
+<main class="wrap"><div class="sectiontitle">データ管理</div><div class="buttons"><button id="refresh" type="button">🔄 カード一覧を更新</button><button id="backup" type="button">⬇ JSONバックアップ</button><button id="restore" type="button">⬆ バックアップ復元</button><input id="restoreFile" type="file" accept="application/json,.json" hidden></div><div id="updateNotice" class="update-notice" hidden role="status" aria-live="polite"></div><div id="status" class="loader">カード一覧を読み込んでいます…（初回はネット接続が必要です）</div><div id="mainbar" hidden></div>
+<nav class="quick-nav" aria-label="ページ内移動"><button id="jumpToCards" type="button">🃏 カード一覧へ</button><button id="jumpToPacks" type="button">📊 パック別収集状況へ</button></nav><div class="sectiontitle">レアリティを選択</div><div class="tabs" id="rarityChips"></div><div class="sectiontitle">レアリティ内のカードの種類を選択</div><div class="category-tabs" id="typeChips"></div><div id="star2Sub" class="star2-sub" hidden><span class="star2-label">⭐2 ポケモンの枠</span><div class="star2-options" id="star2Options"></div></div>
+<div class="controls"><input id="search" aria-label="カード名・番号で検索" placeholder="カード名・カード番号を検索"><select id="set" aria-label="パック"><option value="">すべてのパック</option></select><select id="element" aria-label="タイプ"><option value="">すべてのタイプ</option></select><select id="ownership" hidden><option value="all">すべて</option><option value="missing">未所持</option><option value="owned">所持済み</option></select></div><div class="reset-row"><button id="resetFilters" type="button">↺ 検索・絞り込みをリセット</button></div><div class="filters"><button class="active" type="button" data-ownership="all">すべて</button><button type="button" data-ownership="missing">未所持</button><button type="button" data-ownership="owned">所持済み</button></div>
+<p class="progress" id="showing"></p><div id="cards"></div><div id="empty" class="empty" hidden>条件に一致するカードがありません。</div><button id="more" class="btn-more" hidden>さらに100件表示</button>
+<details id="packProgress" class="subtle-section"><summary>パック別の収集状況を見る</summary><p class="jump-hint">パック名をタップすると、そのパックのカード一覧へ移動します。</p><div id="setStats"></div></details>
+<p class="note">所持チェックはこのブラウザに自動保存されます。以前のポケポケ所持データを同じURL・同じブラウザで引き継ぎます。別端末への移行にはJSONバックアップをご利用ください。プロモカードは集計対象外です。複数種類の排出パックがある拡張パック（A1・A2・A3・A4・B1・C1）は各パックと共通に分類します。排出パックを判別できないカードは「未判定」に表示します。⭐2のポケモンのみ黒枠・虹枠で絞り込めます。色違いはポケモンのみ対象です。カード種類は「ポケモン」と「トレーナーズ」に分類します。カード名とパック名は日本語で表示し、日本語名が確認できないカードは「日本語名未登録」と表示します。カード情報の初回取得・更新にはネット接続が必要です。カード一覧更新時に公開済みのHTMLのバージョンも確認し、新しいレイアウトがあれば再読み込みを案内します。HTML自体を更新するにはGitHubへのアップロードが必要です。非公式データを利用しているため収録状況は提供元の更新に依存します。</p><p class="note">データ元：<a href="https://github.com/flibustier/pokemon-tcg-pocket-database" target="_blank" rel="noopener">pokemon-tcg-pocket-database</a></p>
+<details class="danger-settings" id="collectionSettings"><summary>その他の設定</summary><p>所持状況を初期化します。検索・絞り込み設定やカード一覧は削除されません。実行前にJSONバックアップをおすすめします。</p><button id="resetOwned" type="button">所持状況をすべてリセット</button></details></main><button id="goTop" type="button" aria-label="ページの先頭へ">↑ 上へ</button>
+<script>
+(()=>{'use strict';
+const APP_VERSION='20261114.1';
+const KEY='pokepoke_high_rarity_owned_v1', CACHE='pokepoke_high_rarity_cards_cache_v1', SETCACHE='pokepoke_high_rarity_sets_cache_v1', PACKCACHE='pokepoke_multi_pack_assignments_v1';
+const NAMES_CSV="https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv";
+const NAMES_CACHE="pokepoke_japanese_names_v1";
+let japaneseSpecies={}, namesReady=false;
+const TRAINER_JA={
+// B1〜C1の未登録名補完（英語表記揺れ含む）
+"Marlon":"シズイ",
+"Hala":"ハラ",
+"May":"ハルカ",
+"Copycat":"モノマネむすめ",
+"Lisia":"ルチア",
+"Flame Patch":"フレイムパッチ",
+"Clemont":"シトロン",
+"Quick-Grow Extract":"そうじゅくエキス",
+"Sightseer":"かんこうきゃく",
+"Juggler":"ジャグラー",
+"Team Star Grunt":"スター団のしたっぱ",
+"Electric Generator":"エレキジェネレーター",
+"Metal Core Barrier":"メタルコアバリア",
+"Cabbie":"タクシードライバー",
+"Parasol Lady":"パラソルおねえさん",
+"Juliana":"アオイ",
+"Professor Sada":"オーリム博士",
+"Professor Turo":"フトゥー博士",
+"Puppy-Loving Girl":"こいぬ大好きガール",
+"Wallace":"ミクリ",
+"Small Balloon":"小さなふうせん",
+"Psychic":"サイキッカー",
+"Drayden":"シャガ",
+"Wally":"ミツル",
+"Team Rocket’s Researcher":"ロケット団の研究員",
+"Team Rocket’s Master Plan":"ロケット団の大作戦",
+"Team Rocket’s Boss":"ロケット団のボス",
+"Team Rocket’s Goo-zooka":"ロケット団のベトベトバズーカ",
+"Team Rocket's Researcher":"ロケット団の研究員",
+"Team Rocket's Master Plan":"ロケット団の大作戦",
+"Team Rocket's Boss":"ロケット団のボス",
+"Team Rocket's Goo-zooka":"ロケット団のベトベトバズーカ",
+"Lorelei":"カンナ",
+"Blue’s Provocation":"グリーンの挑発",
+"Serena’s Choice":"セレナの選択",
+"Poké Mart Guy":"フレンドリィショップのお兄さん",
+"Rising Star":"ホープトレーナー",
+"Blue's Provocation":"グリーンの挑発",
+"Serena's Choice":"セレナの選択",
+
+// 日本語名補完（A1a・A2・A2a・A3b・A4・A4a）、既存キーとの重複なし
+"Budding Expeditioner":"かけだし調査員","Team Galactic Grunt":"ギンガ団のしたっぱ","Irida":"カイ","Celestic Town Elder":"カンナギタウンの長老","Adaman":"セキ","Eevee Bag":"イーブイのバッグ","Will":"イツキ","Lyra":"コトネ","Silver":"シルバー","Fisher":"釣り人","Jasmine":"ミカン","Hiker":"やまおとこ","Whitney":"アカネ","Traveling Merchant":"旅の行商人","Morty":"マツバ",
+
+"Erika":"エリカ","Misty":"カスミ","Brock":"タケシ","Blaine":"カツラ","Sabrina":"ナツメ","Giovanni":"サカキ","Lt. Surge":"マチス","Koga":"キョウ","Blue":"グリーン","Red":"レッド","Leaf":"リーフ","Professor Oak":"オーキド博士","Professor’s Research":"博士の研究","Professor's Research":"博士の研究","Pokémon Center Lady":"ポケモンセンターのお姉さん","Pokemon Center Lady":"ポケモンセンターのお姉さん",
+"Cynthia":"シロナ","Dawn":"ヒカリ","Cyrus":"アカギ","Mars":"マーズ","Volkner":"デンジ","Barry":"ジュン","Lucian":"ゴヨウ","Cheryl":"モミ","Gardenia":"ナタネ","Fantina":"メリッサ","Maylene":"スモモ","Candice":"スズナ","Palmer":"クロツグ","Looker":"ハンサム","Lillie":"リーリエ","Lusamine":"ルザミーネ","Gladion":"グラジオ","Guzma":"グズマ","Acerola":"アセロラ","Mallow":"マオ","Lana":"スイレン","Kiawe":"カキ","Sophocles":"マーマネ","Hau":"ハウ","Ilima":"イリマ","Professor Kukui":"ククイ博士","Penny":"ボタン","Nemona":"ネモ","Arven":"ペパー","Iono":"ナンジャモ","Grusha":"グルーシャ","Rika":"チリ","Larry":"アオキ","Clavell":"クラベル","Geeta":"オモダカ","Jacq":"ジニア","Katy":"カエデ","Brassius":"コルサ","Kofu":"ハイダイ","Tulip":"リップ","Ryme":"ライム","Miriam":"ミモザ","Dendra":"キハダ","Salvatore":"セイジ","Raifort":"レホール","Saguaro":"サワロ","Tyme":"タイム","Hassel":"ハッサク","Perrin":"サザレ","Carmine":"ゼイユ","Kieran":"スグリ","Drayton":"カキツバタ","Lacey":"タロ","Crispin":"アカマツ","Amarys":"ネリネ","Bianca":"ベル","Cheren":"チェレン","N":"N","Ghetsis":"ゲーチス","Iris":"アイリス","Skyla":"フウロ","Elesa":"カミツレ","Roxie":"ホミカ","Hilda":"トウコ","Hilbert":"トウヤ","Hugh":"ヒュウ","Colress":"アクロマ","Nessa":"ルリナ","Marnie":"マリィ","Hop":"ホップ","Bede":"ビート","Leon":"ダンデ","Piers":"ネズ","Rose":"ローズ","Oleana":"オリーヴ","Kabu":"カブ","Melony":"メロン","Bea":"サイトウ","Allister":"オニオン","Raihan":"キバナ","Sonia":"ソニア","Ball Guy":"ボールガイ","Serena":"セレナ","Calem":"カルム","Shauna":"サナ","Lysandre":"フラダリ","Diantha":"カルネ","Korrina":"コルニ","Olympia":"ゴジカ","AZ":"AZ","Emma":"マチエール",
+"Poké Ball":"モンスターボール","Poke Ball":"モンスターボール","Great Ball":"スーパーボール","Ultra Ball":"ハイパーボール","Master Ball":"マスターボール","Rare Candy":"ふしぎなアメ","Potion":"キズぐすり","X Speed":"スピーダー","X Speed 2":"スピーダー2","X Attack":"プラスパワー","X Defense":"ディフェンダー","Pokémon Communication":"ポケモン通信","Pokemon Communication":"ポケモン通信","Pokémon Flute":"ポケモンのふえ","Pokemon Flute":"ポケモンのふえ","Red Card":"レッドカード","Hand Scope":"ハンドスコープ","Old Amber":"ひみつのコハク","Helix Fossil":"かいのカセキ","Dome Fossil":"こうらのカセキ","Unidentified Fossil":"なぞのカセキ","Giant Cape":"大きなマント","Rocky Helmet":"ゴツゴツメット","Leaf Cape":"リーフマント","Heavy Helmet":"ヘビーメット","Lum Berry":"ラムのみ","Poison Barb":"どくバリ","Air Balloon":"ふうせん","Rescue Scarf":"レスキュースカーフ","Protective Poncho":"ぼうごパッド","Lucky Ice Pop":"ラッキーアイス","Energy Search":"エネルギー転送","Energy Switch":"エネルギーつけかえ","Pokémon Catcher":"ポケモンキャッチャー","Pokemon Catcher":"ポケモンキャッチャー","Switch":"ポケモンいれかえ","Scoop Up Cyclone":"回収サイクロン","Counter Gain":"カウンターゲイン","Training Area":"トレーニングエリア","Team Rocket Grunt":"ロケット団のしたっぱ","Team Rocket Executive":"ロケット団の幹部","Team Rocket's Admin":"ロケット団の幹部"
+};
+const POKEMON_NAME_OVERRIDES={"Mega Charizard Y ex": "メガリザードンYex", "Mega Charizard X ex": "メガリザードンXex", "Mega Mewtwo X ex": "メガミュウツーXex", "Teal Mask Ogerpon ex": "オーガポンみどりのめんex"};
+const BASE='https://raw.githubusercontent.com/flibustier/pokemon-tcg-pocket-database/main/dist/';
+const RARITIES=[['all','すべて'],['star2','⭐2'],['IM','⭐3'],['UR','クラウン'],['S','色違い⭐1'],['SSR','色違い⭐2']];
+const STAR2_OPTIONS=[['all','すべて'],['black','黒枠'],['rainbow','虹枠']];
+const RARITYNAMES={SR:'⭐2 黒枠',SAR:'⭐2 虹枠',IM:'⭐3',UR:'クラウン',S:'色違い⭐1',SSR:'色違い⭐2'};
+function isStar2(c){return c.rarity==='SR'||c.rarity==='SAR'}
+function star2Group(c){if(!isStar2(c)||cardCategory(c)!=='pokemon')return null;return c.rarity==='SR'?'black':'rainbow'}
+function rarityLabel(c){return RARITYNAMES[c.rarity]}
+const ELEMENT={grass:'草',fire:'炎',water:'水',lightning:'雷',psychic:'超',fighting:'闘',darkness:'悪',metal:'鋼',dragon:'ドラゴン',colorless:'無色',fairy:'フェアリー'};
+const TYPES=[['all','すべて'],['pokemon','ポケモン'],['trainer','トレーナーズ']];
+// トレーナーズの下位分類は使用せず、取得元の大分類で判定する。
+function cardCategory(c){
+ const t=String(c.type||'').toLowerCase();
+ if(t==='pokemon')return 'pokemon';
+ if(t==='trainer')return 'trainer';
+ return 'other';
+}
+
+const $=id=>document.getElementById(id);
+let owned={},cards=[],sets=[],rarity='all',star2Frame='all',type='all',limit=100;
+let packAssignments={};try{packAssignments=JSON.parse(localStorage.getItem(PACKCACHE)||'{}')||{}}catch(_){}
+function safeParse(x,def){try{return JSON.parse(x)??def}catch{return def}}
+owned=safeParse(localStorage.getItem(KEY),{});if(!owned||Array.isArray(owned)||typeof owned!=='object')owned={};
+function save(){localStorage.setItem(KEY,JSON.stringify(owned))}
+function status(s,error=false){$('status').textContent=s;$('status').style.background=error?'#fff2ed':'#eaf2ff';$('status').style.color=error?'#9a3b29':'#244670'}
+const SET_JA={
+'A1':'最強の遺伝子','A1a':'幻のいる島','A2':'時空の激闘','A2a':'超克の光','A2b':'シャイニングハイ','A3':'双天の守護者','A3a':'異次元クライシス','A3b':'イーブイガーデン','A4':'空と海の導き','A4a':'未知なる水域','A4b':'ハイクラスパック ex',
+'B1':'メガライジング','B1a':'紅蓮ブレイズ','B2':'夢幻パレード','B2a':'パルデアワンダー','B2b':'シャイニングメガ','B3':'波動ビート','B3a':'進撃パラドックス','B3b':'ミラクルデイズ','B4':'天空の支配者','B4a':'ロケット団の野望','B4b':'ハイクラスパック MEGA','C1':'デュアルフュージョン',
+'PROMO-A':'プロモカード Aシリーズ','PROMO-B':'プロモカード Bシリーズ','PROMO-C':'プロモカード Cシリーズ','P-A':'プロモカード Aシリーズ','P-B':'プロモカード Bシリーズ','P-C':'プロモカード Cシリーズ','SP1':'スペシャルパック はじまりのパートナー'
+};
+// パック別データ（1種類のみの拡張パックは分割しない）。収録カードのIDは従来どおり。
+const MULTI_PACKS={
+ 'A1':[['Pikachu','ピカチュウ'],['Charizard','リザードン'],['Mewtwo','ミュウツー']],
+ 'A2':[['Dialga','ディアルガ'],['Palkia','パルキア']],
+ 'A3':[['Solgaleo','ソルガレオ'],['Lunala','ルナアーラ']],
+ 'A4':[['Ho-Oh','ホウオウ'],['Lugia','ルギア']],
+ 'B1':[['Mega Gyarados','メガギャラドス'],['Mega Blaziken','メガバシャーモ'],['Mega Altaria','メガチルタリス']],
+ 'C1':[['Dual Fusion Mega Mewtwo X','メガミュウツーX'],['Dual Fusion Pikachu','ピカチュウ']]
+};
+const SHARED='shared', UNKNOWN='unknown';
+function packGroup(c){
+ const variants=MULTI_PACKS[c.set];if(!variants)return c.set;
+ const names=packAssignments[c.set]?.[String(c.number)]||[];
+ if(names.length===1&&variants.some(([k])=>k===names[0]))return c.set+':'+names[0];
+ return c.set+':'+(names.length>1?SHARED:UNKNOWN);
+}
+function groupName(key){
+ const cut=key.indexOf(':');if(cut<0)return setName(key);
+ const code=key.slice(0,cut),kind=key.slice(cut+1);
+ const label=kind===SHARED?'共通':kind===UNKNOWN?'排出パック未判定':MULTI_PACKS[code]?.find(([id])=>id===kind)?.[1]||kind;
+ return (SET_JA[code]||code)+' '+label+'（'+code+'）';
+}
+function selectedPack(c,selection){return !selection||c.set===selection||packGroup(c)===selection}
+function groupKeys(){const seen=new Set();for(const c of cards)seen.add(packGroup(c));return [...seen]}
+async function loadPackAssignments(force=false){
+ if(!force&&Object.keys(packAssignments).length){renderAll();return}
+ try{
+  const res=await fetch(BASE+'cards.json',{cache:'no-store'});if(!res.ok)throw Error('pack HTTP '+res.status);
+  const data=await res.json();if(!Array.isArray(data))throw Error('収録パック情報が不正');
+  const next={};for(const c of data){const variants=MULTI_PACKS[c.set];if(!variants)continue;
+   const allowed=new Set(variants.map(([k])=>k));const pk=Array.isArray(c.packs)?c.packs:[];
+   (next[c.set]??={})[String(c.number)]=[...new Set(pk.map(v=>String(v).trim()).filter(v=>allowed.has(v)))];
+  }
+  if(!Object.keys(next).length)throw Error('排出パック情報が空です');
+  packAssignments=next;try{localStorage.setItem(PACKCACHE,JSON.stringify(next))}catch(_){}
+  if(cards.length)renderAll();
+ }catch(e){console.warn('排出パック情報を取得できませんでした',e)}
+}
+function setName(code){const s=sets.find(x=>x.code===code);return (SET_JA[code]||s?.name?.ja||'パック名未登録')+'（'+code+'）'}
+function nameKey(n){return String(n||'').normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ')}
+function basePokemonName(name){
+ let v=String(name||'').replace(/\s+(?:ex|EX|GX|V|VSTAR)$/i,'').trim();
+ let prefix='';
+ const prefixes=[[/^Mega /i,'メガ'],[/^Alolan /i,'アローラ'],[/^Galarian /i,'ガラル'],[/^Hisuian /i,'ヒスイ'],[/^Paldean /i,'パルデア'],[/^Origin Forme /i,'オリジンフォルム'],[/^Therian Forme /i,'れいじゅうフォルム'],[/^Galar /i,'ガラル']];
+ for(const [rx,j] of prefixes){if(rx.test(v)){v=v.replace(rx,'');prefix+=j;}}
+ const suffix=/\s+(?:ex|EX|GX|V|VSTAR)$/i.exec(name);
+ return {v,prefix,suffix:suffix?'ex':''};
+}
+function displayName(card){
+ const orig=String(card.name||'');if(!orig)return '名前不明';
+ if(TRAINER_JA[orig])return TRAINER_JA[orig];
+ if(POKEMON_NAME_OVERRIDES[orig])return POKEMON_NAME_OVERRIDES[orig];
+ let m=/^(?:Team Rocket's|Team Rocket’s) (.+)$/i.exec(orig);
+ if(m){let inner=translatePokemon(m[1]);if(inner)return 'ロケット団の'+inner;}
+ m=/^(.+?)'s (.+)$/i.exec(orig);if(m){let owner=TRAINER_JA[m[1]];let poke=translatePokemon(m[2]);if(owner&&poke)return owner+'の'+poke;}
+ return translatePokemon(orig)||'日本語名未登録';
+}
+function translatePokemon(orig){
+ const {v,prefix,suffix}=basePokemonName(orig);
+ let ja=japaneseSpecies[nameKey(v)];
+ if(!ja)return null;
+ return prefix+ja+suffix;
+}
+async function loadJapaneseNames(force=false){
+ try{
+  let cached=force?null:safeParse(localStorage.getItem(NAMES_CACHE),null);
+  if(cached&&typeof cached==='object'&&Object.keys(cached).length>700){japaneseSpecies=cached;namesReady=true;renderCards();return;}
+  const r=await fetch(NAMES_CSV,{cache:'no-store'});if(!r.ok)throw Error('日本語名取得失敗');
+  const content=await r.text();const byId=new Map();
+  for(const line of content.split(/\r?\n/)){
+    const match=/^(\d+),(\d+),((?:"(?:[^"]|"")*"|[^,]*)),/.exec(line);
+    if(!match)continue;let name=match[3].replace(/^"|"$/g,'').replace(/""/g,'"');
+    const id=match[1],lang=Number(match[2]);let v=byId.get(id)||{};
+    if(lang===9)v.en=name;if(lang===1)v.ja=name;
+    byId.set(id,v);
+  }
+  let translated={};for(let v of byId.values())if(v.en&&v.ja)translated[nameKey(v.en)]=v.ja;
+  if(Object.keys(translated).length<700)throw Error('対訳データ不正');
+  japaneseSpecies=translated;namesReady=true;try{localStorage.setItem(NAMES_CACHE,JSON.stringify(translated))}catch(_){}
+  renderCards();
+ }catch(err){console.warn('日本語のポケモン名を取得できませんでした',err);}
+}
+function isPromo(c){const code=String(c.set||'').toUpperCase();const set=sets.find(s=>String(s.code||'').toUpperCase()===code);return /^(?:PROMO(?:[-_]|$)|P[-_]?[ABC](?:$|[-_]))/.test(code)||/プロモ|PROMO/i.test(String(set?.name?.ja||'')+' '+String(set?.name?.en||''));}
+function cleanCards(list){return list.filter(c=>RARITYNAMES[c.rarity]&&!isPromo(c)).map(c=>({...c,id:`${c.set}-${String(c.number).padStart(3,'0')}`})).filter(c=>sets.some(s=>s.code===c.set && (!s.releaseDate||s.releaseDate<=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'})))).sort((a,b)=>a.set.localeCompare(b.set,undefined,{numeric:true})||a.number-b.number)}
+async function load(force=false){status('カード一覧を読み込んでいます…');const oldSets=safeParse(localStorage.getItem(SETCACHE),[]),oldCards=safeParse(localStorage.getItem(CACHE),[]);try{if(!force&&oldCards.length&&oldSets.length){sets=oldSets;cards=cleanCards(oldCards);status('保存済みのカード一覧を表示中。新カードは「カード一覧更新」で取得できます。更新時にはレイアウトの新バージョンも確認します。');renderAll();return}
+const [cr,sr]=await Promise.all([fetch(BASE+'cards.extra.json',{cache:'no-store'}),fetch(BASE+'sets.json',{cache:'no-store'})]);if(!cr.ok||!sr.ok)throw Error('取得失敗');const [c,ss]=await Promise.all([cr.json(),sr.json()]);if(!Array.isArray(c)||!ss||typeof ss!=='object')throw Error('データ形式が不正');sets=Object.values(ss).flat().filter(s=>s&&s.code);cards=cleanCards(c);if(!cards.length)throw Error('対象カードがありません');try{localStorage.setItem(CACHE,JSON.stringify(c.filter(x=>RARITYNAMES[x.rarity])));localStorage.setItem(SETCACHE,JSON.stringify(sets))}catch(e){console.warn('カード一覧のキャッシュ保存を省略',e)}status('カード一覧を更新しました。対象 '+cards.length+' 種類');renderAll();}catch(e){if(oldCards.length&&oldSets.length){sets=oldSets;cards=cleanCards(oldCards);status('通信に失敗したため保存済みの一覧を表示しています。');renderAll()}else status('カード一覧の取得に失敗しました。ネットに接続し「カード一覧更新」を押してください。 '+e.message,true)}}
+function renderChips(){
+ const rc=$('rarityChips');rc.innerHTML='';RARITIES.forEach(([id,label])=>{
+  let b=document.createElement('button');b.type='button';b.className=rarity===id?'active':'';b.textContent=label;
+  b.onclick=()=>{rarity=id;if(rarity==='S'||rarity==='SSR')type='pokemon';else type='all';star2Frame='all';limit=100;renderAll()};rc.append(b)
+ });
+ const tc=$('typeChips');tc.innerHTML='';
+ const shiny=rarity==='S'||rarity==='SSR';
+ const entries=shiny?[['pokemon','ポケモン']]:[...TYPES];
+ entries.forEach(([id,label])=>{let b=document.createElement('button');b.type='button';b.className=type===id?'active':'';b.textContent=label;
+  b.onclick=()=>{type=id;star2Frame='all';limit=100;renderAll()};tc.append(b)});
+ const sub=$('star2Sub'),options=$('star2Options');
+ sub.hidden=rarity!=='star2'||type!=='pokemon';options.innerHTML='';
+ if(!sub.hidden){STAR2_OPTIONS.forEach(([id,label])=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.className=star2Frame===id?'active':'';b.setAttribute('aria-pressed',String(star2Frame===id));b.onclick=()=>{star2Frame=id;limit=100;renderAll()};options.append(b)})}
+}
+function populate(){
+ const selection=$('set').value;$('set').innerHTML='<option value="">すべてのパック</option>';
+ Array.from(new Set(cards.map(c=>c.set))).forEach(code=>{
+  if(MULTI_PACKS[code]){
+   $('set').add(new Option(setName(code)+'（全体）',code));
+   const choices=[...MULTI_PACKS[code],[SHARED,'共通'],[UNKNOWN,'排出パック未判定']];
+   for(const [id] of choices){const k=code+':'+id;if(cards.some(c=>packGroup(c)===k))$('set').add(new Option('　'+groupName(k),k))}
+  }else $('set').add(new Option(setName(code),code));
+ });
+ $('set').value=selection;
+ const elem=$('element'),prev=elem.value;elem.innerHTML='<option value="">すべてのタイプ</option>';
+ Array.from(new Set(cards.map(c=>String(c.element||'').toLowerCase()).filter(Boolean))).sort((a,b)=>{const order=['grass','fire','water','lightning','psychic','fighting','darkness','metal','dragon','colorless'];const ai=order.indexOf(a),bi=order.indexOf(b);return (ai<0?order.length:ai)-(bi<0?order.length:bi)||a.localeCompare(b)}).forEach(e=>elem.add(new Option(ELEMENT[e]||e,e)));elem.value=prev;
+}
+function filt(){let q=$('search').value.trim().toLocaleLowerCase(),set=$('set').value,el=$('element').value,own=$('ownership').value;return cards.filter(c=>(rarity==='all'||(rarity==='star2'&&isStar2(c))||c.rarity===rarity)&&(type==='all'||cardCategory(c)===type)&&(!(rarity==='star2'&&type==='pokemon')||star2Frame==='all'||star2Group(c)===star2Frame)&&selectedPack(c,set)&&(!el||String(c.element||'').toLowerCase()===el)&&(!q||displayName(c).toLocaleLowerCase().includes(q)||(c.name||'').toLowerCase().includes(q)||c.id.toLowerCase().includes(q))&&(own==='all'||(own==='owned'?!!owned[c.id]:!owned[c.id])))}
+function overall(){let n=cards.filter(c=>owned[c.id]).length;$('ownedN').textContent=n;$('totalN').textContent=cards.length;$('rateN').textContent=cards.length?((n/cards.length)*100).toFixed(1)+'%':'—';$('mainbar').style.width=(cards.length?n/cards.length*100:0)+'%'}
+function setProgress(){
+ const el=$('setStats');el.innerHTML='';const setcodes=groupKeys();
+ setcodes.forEach(code=>{const subset=cards.filter(c=>packGroup(c)===code),have=subset.filter(c=>owned[c.id]).length;
+ const div=document.createElement('button');div.type='button';div.className='setrow';div.title=groupName(code)+'のカード一覧へ';
+ const m=document.createElement('div');m.className='rowmeta';const title=document.createElement('span');title.textContent=groupName(code)+' ↗';
+ const counter=document.createElement('strong');counter.textContent=`${have} / ${subset.length}（${(have/subset.length*100).toFixed(1)}%）`;m.append(title,counter);
+ const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('div');fill.style.width=(have/subset.length*100)+'%';bar.append(fill);div.append(m,bar);
+ div.onclick=()=>{resetFilters(false);$('set').value=code;limit=100;renderCards();$('cards').scrollIntoView({behavior:'smooth',block:'start'})};
+ el.append(div)});if(!setcodes.length)el.textContent='カード情報を取得すると表示されます。'
+}
+function renderCards(){
+ const list=filt(),root=$('cards');root.innerHTML='';$('showing').textContent=`絞り込み結果：${list.length} 種類 ／ 表示：${Math.min(limit,list.length)} 種類`;$('empty').hidden=!!list.length;
+ const visible=list.slice(0,limit),bySet=new Map();for(const c of visible){const k=packGroup(c);if(!bySet.has(k))bySet.set(k,[]);bySet.get(k).push(c)}
+ for(const [code,group] of bySet){const allPack=cards.filter(c=>packGroup(c)===code),have=allPack.filter(c=>owned[c.id]).length;
+ const section=document.createElement('section');section.className='pack';const head=document.createElement('div');head.className='packhead';const label=document.createElement('span');label.textContent=groupName(code);const count=document.createElement('small');count.textContent=`${have} / ${allPack.length} 所持`;head.append(label,count);section.append(head);
+ const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('i');fill.style.width=(allPack.length?have/allPack.length*100:0)+'%';bar.append(fill);section.append(bar);
+ for(const c of group){const item=document.createElement('div');item.className='item'+(owned[c.id]?' owned':'');const info=document.createElement('div');info.className='info';const title=document.createElement('strong');title.textContent=displayName(c);const tag=document.createElement('span');tag.className='tag';tag.textContent=rarityLabel(c);title.append(tag);const small=document.createElement('small');small.textContent=c.id+(c.element?' · '+(ELEMENT[String(c.element).toLowerCase()]||'タイプ未登録'):'');info.append(title,small);
+ const link=document.createElement('a');link.className='searchlink';link.textContent='画像検索';link.href='https://www.google.com/search?tbm=isch&q='+encodeURIComponent('ポケポケ '+c.id+' '+displayName(c));link.target='_blank';link.rel='noopener';
+ const check=document.createElement('label');check.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=!!owned[c.id];input.setAttribute('aria-label',displayName(c)+'を所持');input.onchange=()=>{if(input.checked)owned[c.id]=true;else delete owned[c.id];save();renderAll()};check.append(input,document.createTextNode('所持'));item.append(info,link,check);section.append(item)}root.append(section)
+ }$('more').hidden=list.length<=limit;
+}
+function renderAll(){renderChips();populate();overall();setProgress();renderCards()}
+function resetFilters(shouldScroll=false){
+ rarity='all';type='all';star2Frame='all';limit=100;
+ $('search').value='';$('set').value='';$('element').value='';$('ownership').value='all';
+ document.querySelectorAll('[data-ownership]').forEach(b=>b.classList.toggle('active',b.dataset.ownership==='all'));
+ renderAll();if(shouldScroll)$('rarityChips').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('resetFilters').onclick=()=>resetFilters(true);
+$('jumpToCards').onclick=()=>$('cards').scrollIntoView({behavior:'smooth',block:'start'});
+$('jumpToPacks').onclick=()=>{const details=$('packProgress');details.open=true;details.scrollIntoView({behavior:'smooth',block:'start'})};
+document.querySelectorAll('[data-ownership]').forEach(b=>b.addEventListener('click',()=>{$('ownership').value=b.dataset.ownership;document.querySelectorAll('[data-ownership]').forEach(x=>x.classList.toggle('active',x===b));limit=100;renderCards()}));
+['search','set','element','ownership'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{limit=100;renderCards()}));$('more').onclick=()=>{limit+=100;renderCards()};
+function updateNotice(message, reload=false){
+ const panel=$('updateNotice');panel.replaceChildren();panel.hidden=false;
+ const msg=document.createElement('div');msg.textContent=message;panel.append(msg);
+ if(reload){const button=document.createElement('button');button.type='button';button.textContent='新しいレイアウトを読み込む';button.onclick=()=>location.reload();panel.append(button)}
+}
+async function checkLayoutUpdate(){
+ // GitHub Pages上の公開済みHTMLを確認する。データ取得と独立しており、更新を自動書換えしない。
+ if(location.protocol!=='https:'&&location.protocol!=='http:'){
+  updateNotice('レイアウトの更新確認はGitHub Pagesなどの公開URLで利用できます。');return;
+ }
+ const panel=$('updateNotice');panel.hidden=false;panel.textContent='レイアウトの更新を確認しています…';
+ try{
+  const url=new URL(location.href);url.searchParams.set('_layout_check',String(Date.now()));
+  const response=await fetch(url.href,{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const html=await response.text();
+  const found=html.match(/<meta\s+name=["']app-version["']\s+content=["']([0-9.]+)["']/i);
+  if(!found){updateNotice('公開ページにバージョン情報がありません。GitHubで最新版のHTMLが公開されているか確認してください。');return}
+  const remoteVersion=found[1];
+  const compare=(a,b)=>{const x=a.split('.').map(Number),y=b.split('.').map(Number);for(let i=0;i<Math.max(x.length,y.length);i++){if((x[i]||0)!==(y[i]||0))return (x[i]||0)-(y[i]||0)}return 0};
+  if(compare(remoteVersion,APP_VERSION)>0){updateNotice('新しいレイアウトが公開されています（v'+remoteVersion+'）。所持記録はそのままで更新できます。',true)}
+  else if(compare(remoteVersion,APP_VERSION)===0)updateNotice('レイアウトは最新版です（v'+APP_VERSION+'）。');
+  else updateNotice('現在のレイアウトは公開版より新しいバージョンです（v'+APP_VERSION+'）。');
+ }catch(err){updateNotice('レイアウトの更新を確認できませんでした。通信状態と公開URLを確認してください。')}
+}
+$('refresh').onclick=async()=>{
+ const btn=$('refresh');btn.disabled=true;btn.textContent='🔄 カード一覧とレイアウトを確認中…';
+ try{await Promise.allSettled([load(true),loadPackAssignments(true),checkLayoutUpdate()]);}
+ finally{btn.disabled=false;btn.textContent='🔄 カード一覧を更新'}
+};
+$('backup').onclick=()=>{const data={version:1,app:'pokepoke-high-rarity-checker',owned,exportedAt:new Date().toISOString()};const u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='pokepoke-high-rarity-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+$('resetOwned').onclick=()=>{
+ const count=Object.values(owned).filter(Boolean).length;
+ if(count===0){alert('所持記録はすでに0件です。');return}
+ if(!confirm(`所持済み ${count} 件の記録をすべて削除します。\n元に戻すには事前のJSONバックアップが必要です。\n本当にリセットしますか？`))return;
+ if(!confirm('最終確認：すべての所持チェックを外します。実行しますか？'))return;
+ const previous=owned;owned={};
+ try{save();renderAll();alert('所持状況をリセットしました。')}catch(e){owned=previous;alert('所持記録をリセットできませんでした。ブラウザの保存設定をご確認ください。')}
+};
+$('restore').onclick=()=>$('restoreFile').click();$('restoreFile').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const data=JSON.parse(await f.text());if(data.app!=='pokepoke-high-rarity-checker'||!data.owned||typeof data.owned!=='object'||Array.isArray(data.owned))throw Error('対象外のバックアップ形式');if(!confirm('現在の所持記録をバックアップの内容で置き換えますか？'))return;owned={};for(const [k,v] of Object.entries(data.owned)){if(/^[A-Za-z0-9-]+$/.test(k)&&v===true)owned[k]=true}save();renderAll();alert('復元しました。')}catch(err){alert('復元できません：'+err.message)}finally{e.target.value=''}};
+window.addEventListener('scroll',()=>{$('goTop').classList.toggle('show',window.scrollY>340)},{passive:true});$('goTop').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+load();loadPackAssignments();loadJapaneseNames();
+})();
+</script></body></html>
